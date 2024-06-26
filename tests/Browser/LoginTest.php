@@ -24,4 +24,10 @@ class LoginTest extends DuskTestCase
                     ->assertSee('つぶやきアプリ');
         });
     }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->withoutVite();
+    }
 }
